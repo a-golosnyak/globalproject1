@@ -15,22 +15,41 @@
   <body>
       <!-- Start your project here-->
 <!--=============================================================================================-->
-        <div style="height: 100vh">
-            <div class="flex-center flex-column">
-                <h2 class="animated fadeIn  mb-1">Features, samples, templates.</h2>
-                <h5 class="animated rubberBand mb-3">Material Design for Bootstrap included.</h5>
-                <div class="draw animated fadeIn shadow p-4 w-50 h-75">  
-                    <ol>
-                        <a href="01emptygrid.php"><li>Empty grid.</li>
-                        <a href="02pointerinteraction.php"><li>Интерактивность указателя XY 1.</li>
-                        <a href="03pointerinteraction.php"><li>Интерактивность указателя X 2.</li>
-                        <a href="02pointerinteraction.php"><li></li>
-                        <a href="02pointerinteraction.php"><li></li>
-                    </ol>   
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var X = Y = 0;
+
+            function move() 
+            {
+                document.getElementById('x31').style.left = 300 + 2*(X-300)/3 + 'px';
+                document.getElementById('x32').style.left = 300 + (X-300)/2 + 'px';
+                document.getElementById('x33').style.left = 300 + (X-300)/3 + 'px';
+            //   document.getElementById('x3').style.top = Y + 'px';
+            }
+
+            document.addEventListener("mousemove", function (e) {
+                X = e.clientX;
+                Y = e.clientY;
+            }, false);
+            
+            setInterval(move, 100);
+        });
+    </script>
+
+      <div style="height: 100vh">
+            <body>
+            <br>
+            <br>
+            <hr>
+                <div class="draw animated fadeIn shadow m-5 p-4 w-50 h-75"> 
+                    <div class="x3" id="x31"></div>
+                    <div class="x3" id="x32"></div>
+                    <div class="x3" id="x33"></div>
                 </div>
-            </div>
-        </div>
-        <!-- /Start your project here-->
+          </body>
+      </div>
+      <!-- /Start your project here-->
 <!--=============================================================================================-->
     <!-- SCRIPTS -->
     <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>

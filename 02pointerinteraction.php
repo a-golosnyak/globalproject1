@@ -18,18 +18,20 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-        var X = Y = 0;
+            var X = Y = 0;
 
-        function move() {
-            document.getElementById('x').style.left = X + 'px';
-            document.getElementById('x').style.top = Y + 'px';
-        }
+            function move() 
+            {
+                document.getElementById('x').style.left = X + 'px';
+                document.getElementById('x').style.top = Y + 'px';
+            }
 
-        document.addEventListener("mousemove", function (e) {
-        X = e.clientX;
-        Y = e.clientY;
-        }, false);
-        setInterval(move, 100);
+            document.addEventListener("mousemove", function (e) {
+                X = e.clientX;
+                Y = e.clientY;
+            }, false);
+            
+            setInterval(move, 100);
         });
     </script>
 
@@ -38,17 +40,9 @@
             <br>
             <br>
             <hr>
-              <div class="draw" style="
-                    box-shadow: 0 0 5px rgba(0,0,0,0.5);
-                    margin: 20px 40px;
-                    padding: 30px;
-                    width: 60%;
-                    height: 70%;
-                    /*margin-right: auto;*/
-                    background-color: rgba(250, 250, 250, 1);
-                    ">  
-                <div id="x"></div>
-              </div>
+                <div class="draw animated fadeIn shadow m-5 p-4 w-50 h-75"> 
+                    <div id="x"></div>
+                </div>
           </body>
       </div>
       <!-- /Start your project here-->
