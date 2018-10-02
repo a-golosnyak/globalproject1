@@ -15,27 +15,41 @@
   <body>
       <!-- Start your project here-->
 <!--=============================================================================================-->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        var X = Y = 0;
+
+        function move() {
+            document.getElementById('x').style.left = X + 'px';
+            document.getElementById('x').style.top = Y + 'px';
+        }
+
+        document.addEventListener("mousemove", function (e) {
+        X = e.clientX;
+        Y = e.clientY;
+        }, false);
+        setInterval(move, 100);
+        });
+    </script>
+
       <div style="height: 100vh">
-          <div class="flex-center flex-column">
-              <h2 class="animated fadeIn  mb-2">Features, samples, templates.</h2>
-
-              <h5 class="animated rubberBand mb-2">Material Design for Bootstrap included.</h5>
-
-              <div class="draw animated fadeIn shadow p-4" style="
-              width: 60%;
-              height: 70%;
-              /*margin-right: auto;*/
-              background-color: rgba(250, 250, 250, 1);
-              ">  
-          <ol>
-            <a href="01emptygrid.php"><li>Empty grid.</li>
-            <a href="02pointerinteraction.php"><li>Интерактивность указателя 1.</li>
-            <a href="01emptygrid.php"><li></li>
-            <a href="01emptygrid.php"><li></li>
-            <a href="01emptygrid.php"><li></li>
-          </ol>   
-        </div>
-          </div>
+            <body>
+            <br>
+            <br>
+            <hr>
+              <div class="draw" style="
+                    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+                    margin: 20px 40px;
+                    padding: 30px;
+                    width: 60%;
+                    height: 70%;
+                    /*margin-right: auto;*/
+                    background-color: rgba(250, 250, 250, 1);
+                    ">  
+                <div id="x"></div>
+              </div>
+          </body>
       </div>
       <!-- /Start your project here-->
 <!--=============================================================================================-->
