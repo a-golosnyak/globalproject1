@@ -49,11 +49,11 @@ a{
 	background-size:50px 50px;
     z-index: 1;
 }
-
+/*
 li{
     list-style-type: none;
 }
-
+*/
 .viewport{
     overflow: hidden;
     position: relative;
