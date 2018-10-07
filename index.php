@@ -25,7 +25,10 @@
                         <a href="02pointerinteraction.php"><li>Интерактивность указателя XY Follow.</li>
                         <a href="03pointerinteraction.php"><li>Интерактивность указателя XY Proto Parallax.</li>
                         <a href="04pointerinteraction.php"><li>Интерактивность указателя Rotation.</li>
+                        <a href="05pointerinteraction.php"><li>Перспектива</li>
                         <a href="05pointerinteraction.php"><li></li>
+                        <a href="05pointerinteraction.php"><li></li>
+                         <a href="05pointerinteraction.php"><li></li>
                     </ol>   
                 </div>
             </div>

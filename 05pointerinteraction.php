@@ -22,13 +22,12 @@
 
             function move() 
             {
-                document.getElementById('x31').style.left = 300 - (X-500)/2 + 'px';
-                document.getElementById('x32').style.left = 300 - (X-500)/3 + 'px';
-                document.getElementById('x33').style.left = 300 - (X-500)/4 + 'px';
-
-                document.getElementById('x31').style.top = 300 - (Y-300)/3 + 'px';
-                document.getElementById('x32').style.top = 300 - (Y-300)/4 + 'px';
-                document.getElementById('x33').style.top = 300 - (Y-300)/5 + 'px';
+                Var = 1;
+            //    document.getElementById('rect5').style.transform ='rotateX('+ (Y/20-20) +'deg)';
+                document.getElementById('rect5').style.transform ='rotateY('+ (X/10-30) +'deg)';
+                document.getElementById('x-val').value = X;
+                document.getElementById('y-val').value = Y;
+                Var=Var+1;
             }
 
             document.addEventListener("mousemove", function (e) {
@@ -36,24 +35,23 @@
                 Y = e.clientY;
             }, false);
             
-            setInterval(move, 100);
+            setInterval(move, 20);
         });
     </script>
-    <div class="container-fluid">
+    <div class="container">
         <div style="height: 100vh">
             <br>
             <br>
             <hr>
-            <!--    <div class="container draw animated fadeIn shadow m-5 p-4 w-50 h-75"> 
-                    <div class="x3" id="x31"></div>
-                    <div class="x3" id="x32"></div>
-                    <div class="x3" id="x33"></div>
-                </div>  -->
-                <div class="container draw shadow w-100 h-75 viewport" >
-                    <div class="x3" id="x31"></div>
-                    <div class="x3" id="x32"></div>
-                    <div class="x3" id="x33"></div>
-                </div>
+            <br>
+            <div class="viewport5">
+                <div id='rect5'>Top</div>
+            </div>
+            <br>
+            <br>
+            <hr>
+            <label>X <input type="text" size="4" id="x-val" value="123" /></label>
+            <label>Y <input type="text" size="4" id="y-val" value="123" /></label>
         </div>
     </div>
     <!-- /Start your project here-->
