@@ -19,6 +19,8 @@
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             var X = Y = 0;
+            oldX = 0;
+            newX = 0;
 
             viewport51.onmouseover = function(){
                 viewport51Time = setInterval(move1, 20);
@@ -38,10 +40,15 @@
 
             function move1() 
             {
-                document.getElementById('rect5').style.transform ='rotateY('+ (X/2-30) +'deg)';
+                dX = oldX-X;
+                oldX = X; 
+                newX += dX;
+                document.getElementById('rect5').style.transform ='rotateY('+ (newX/2-30) +'deg)';
                 document.getElementById('x-val').value = X;
+                document.getElementById('oldX-val').value = oldX;
+                document.getElementById('newX-val').value = newX;
+                document.getElementById('dX-val').value = dX;
                 document.getElementById('y-val').value = Y;
-                Var=Var+1;
             }
             function move2() 
             {
@@ -69,8 +76,13 @@
                     <img src="img/user/10_hand.jpg" class="mt-5" id='rect51' alt="">
                 </div>
             </div>
-            <label>X <input type="text" size="4" id="x-val" value="123" /></label>
-            <label>Y <input type="text" size="4" id="y-val" value="123" /></label>
+            <div>
+                <label>X <input type="text" size="4" id="x-val" value="123" /></label>
+                <label>Y <input type="text" size="4" id="y-val" value="123" /></label>
+            </div>
+            <div><label>oldX <input type="text" size="4" id="oldX-val" value="123" /></label></div>
+            <div><label>newX <input type="text" size="4" id="newX-val" value="123" /></label></div>
+            <div><label>dX <input type="text" size="4" id="dX-val" value="123" /></label></div>
         </div>
     </div>
     <!-- /Start your project here-->
